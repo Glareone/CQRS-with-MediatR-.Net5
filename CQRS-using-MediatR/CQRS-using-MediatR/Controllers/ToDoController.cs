@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 namespace CQRS_using_MediatR.Controllers
 {
     [ApiController]
-    [Route("todoController")]
     public class ToDoController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -16,10 +15,16 @@ namespace CQRS_using_MediatR.Controllers
         }
 
         [HttpGet("/{id}")]
-        public async Task<ActionResult<GetTodoById.Response>> GetTodoById(int id)
+        public async Task<IActionResult> GetTodoById(int id)
         {
             var response = await mediator.Send(new GetTodoById.Query(id));
             return response != null ? Ok(response) : NotFound();
+        }
+
+        [HttpPost("")]
+        public async Task<IActionResult> AddTodo(CQRSTest.Commands.AddTodo.Command command) 
+        {
+            return Ok(await mediator.Send(command));
         }
     }
 }
