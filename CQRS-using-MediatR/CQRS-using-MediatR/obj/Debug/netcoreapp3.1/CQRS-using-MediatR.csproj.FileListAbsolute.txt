@@ -24,3 +24,4 @@ C:\Work\CQRD-with-MediatR\CQRS-using-MediatR\CQRS-using-MediatR\obj\Debug\netcor
 C:\Work\CQRD-with-MediatR\CQRS-using-MediatR\CQRS-using-MediatR\obj\Debug\netcoreapp3.1\CQRS-using-MediatR.dll
 C:\Work\CQRD-with-MediatR\CQRS-using-MediatR\CQRS-using-MediatR\obj\Debug\netcoreapp3.1\CQRS-using-MediatR.pdb
 C:\Work\CQRD-with-MediatR\CQRS-using-MediatR\CQRS-using-MediatR\obj\Debug\netcoreapp3.1\CQRS-using-MediatR.genruntimeconfig.cache
+C:\Work\CQRD-with-MediatR\CQRS-using-MediatR\CQRS-using-MediatR\obj\Debug\netcoreapp3.1\CQRS-using-MediatR.csprojAssemblyReference.cache

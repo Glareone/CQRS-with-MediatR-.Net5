@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "HfGwORCAILWEGPhiXIqblrUnD4CzgLBmV0E8NT1WGnRqfWlNCV0EglE4mN/IvEQlld9HDHawoNS7dpKojE7Bgw==",
+  "dgSpecHash": "avbd16rmdPRD9sGDVemQsfJxCy0e3JGP3s8lBdyfUhzOZVX2k8wrujIQzKlR4OEi0g+YCPYvxJpIF7SrcBBjQQ==",
   "success": true,
   "projectFilePath": "C:\\Work\\CQRD-with-MediatR\\CQRS-using-MediatR\\CQRS-using-MediatR\\CQRS-using-MediatR.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore\\6.0.5\\swashbuckle.aspnetcore.6.0.5.nupkg.sha512",
     "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.0.5\\swashbuckle.aspnetcore.swagger.6.0.5.nupkg.sha512",
-    "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.0.5\\swashbuckle.aspnetcore.swaggergen.6.0.5.nupkg.sha512",
+    "C:\\Users\\Aleksey_Kolesnikov\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.0.5\\swashbuckle.aspnetcore.swaggerui.6.0.5.nupkg.sha512"
   ],
   "logs": []
 }
