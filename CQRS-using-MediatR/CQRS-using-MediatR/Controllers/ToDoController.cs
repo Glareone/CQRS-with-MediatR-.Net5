@@ -21,7 +21,7 @@ namespace CQRS_using_MediatR.Controllers
             return response != null ? Ok(response) : NotFound();
         }
 
-        [HttpPost("")]
+        [HttpPost("/")]
         public async Task<IActionResult> AddTodo(CQRSTest.Commands.AddTodo.Command command) 
         {
             return Ok(await mediator.Send(command));

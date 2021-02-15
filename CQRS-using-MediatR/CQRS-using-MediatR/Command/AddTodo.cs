@@ -11,12 +11,16 @@ namespace CQRSTest.Commands
         // Command
         public class Command : IRequest<int> 
         {
+            public Command()
+            {
+
+            }
             public Command(string name)
             {
                 Name = name;
             }
 
-            public string Name { get; }
+            public string Name { get; set; }
         }
 
         // Handler
