@@ -1,39 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CQRS_using_MediatR.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace CQRS_using_MediatR.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ToDoController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private readonly IMediator mediator;
+        public ToDoController(IMediator mediator)
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
+            this.mediator = mediator;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<ActionResult<GetTodoById.Response>> GetTodoById(int id)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var response = await mediator.Send(new GetTodoById.Query(id));
+            return response != null ? Ok(response) : NotFound();
         }
     }
 }
