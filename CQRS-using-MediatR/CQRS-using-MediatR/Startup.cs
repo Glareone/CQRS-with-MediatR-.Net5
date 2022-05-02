@@ -1,3 +1,4 @@
+﻿using System.Reflection;
 using CQRS_using_MediatR.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,8 +32,8 @@ namespace CQRS_using_MediatR
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "CQRSTest", Version = "v1" });
             });
-            services.AddSingleton<FooRepository>();
-            services.AddMediatR(typeof(Startup).Assembly);
+            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
 
         }
 
@@ -52,6 +53,8 @@ namespace CQRS_using_MediatR
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
