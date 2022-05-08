@@ -1,4 +1,4 @@
-﻿using CQRS_using_MediatR.Repository.Domain;
+﻿using CQRS_using_MediatR.DAL.Entities;
 using System.Collections.Generic;
 
 namespace CQRS_using_MediatR.DAL.Repository

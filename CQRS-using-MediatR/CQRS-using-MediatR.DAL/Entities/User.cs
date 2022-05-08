@@ -1,4 +1,4 @@
-﻿namespace CQRS_using_MediatR.Repository.Domain
+﻿namespace CQRS_using_MediatR.DAL.Entities
 {
     public class User
     {

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MediatR;
 using CQRS_using_MediatR.DAL.Repository;
+using CQRS_using_MediatR.Common.Infrastructure.Mapper;
 
 namespace CQRS_using_MediatR
 {
@@ -34,7 +35,7 @@ namespace CQRS_using_MediatR
             });
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
-
+            services.AddAutoMapper(cfg => cfg.AddProfile<AutoMapperProfile>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

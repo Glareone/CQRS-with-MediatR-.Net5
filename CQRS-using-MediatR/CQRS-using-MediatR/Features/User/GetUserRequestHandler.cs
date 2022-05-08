@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using CQRS_using_MediatR.Common.Infrastructure.ErrorHandlers;
 using CQRS_using_MediatR.Common.Infrastructure.ResponseTemplate;
 using CQRS_using_MediatR.DAL.Repository;
@@ -12,11 +13,12 @@ namespace CQRS_using_MediatR.Features.User
     public class GetUserRequestHandler: IRequestHandler<GetUserRequestQuery, ResponseTemplate<UserDto>>
     {
         private readonly IUserRepository _userRepository;
-        // TODO add Mapper
+        private readonly IMapper _mapper;
 
-        public GetUserRequestHandler(IUserRepository userRepository)
+        public GetUserRequestHandler(IUserRepository userRepository, IMapper mapper)
         {
             _userRepository = userRepository;
+            _mapper = mapper;
         }
 
         public async Task<ResponseTemplate<UserDto>> Handle(GetUserRequestQuery query,
@@ -29,10 +31,7 @@ namespace CQRS_using_MediatR.Features.User
                 return ErrorHandlingUtils.GetResponseTemplate<UserDto>(ErrorCode.Input);
             }
             
-            return new ResponseTemplate<UserDto>(new UserDto
-            {
-                Id = user.Id, Name = user.Name, IsDeleted = user.IsDeleted
-            });
+            return new ResponseTemplate<UserDto>(_mapper.Map<UserDto>(user));
         }
     }
 }
