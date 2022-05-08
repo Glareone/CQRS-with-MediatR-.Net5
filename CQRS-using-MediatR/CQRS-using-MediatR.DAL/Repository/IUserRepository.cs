@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using CQRS_using_MediatR.Repository.Domain;
+using CQRS_using_MediatR.DAL.Entities;
 
 namespace CQRS_using_MediatR.DAL.Repository
 {
     public interface IUserRepository
     {
-        public IEnumerable<User> Users { get; }
+        public IList<User> Users { get; }
     }
 }

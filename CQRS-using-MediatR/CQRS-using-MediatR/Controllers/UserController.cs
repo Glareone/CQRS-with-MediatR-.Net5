@@ -26,12 +26,9 @@ namespace CQRS_using_MediatR.Controllers
         }
 
         [HttpPost("/")]
-        public async Task<IActionResult> AddUser() 
+        public async Task<IActionResult> AddUser(string userName, bool isDeleted) 
         {
-            // TODO
-            // AddUserRequestCommand
-            // send
-            // response -> responseTemplate
+            var response = await _mediator.Send(new AddUserCommand(userName, isDeleted));
             return Ok();
         }
     }
