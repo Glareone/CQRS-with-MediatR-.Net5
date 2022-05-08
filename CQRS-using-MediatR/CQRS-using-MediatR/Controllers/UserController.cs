@@ -21,7 +21,7 @@ namespace CQRS_using_MediatR.Controllers
         [EnableCors("AllowAll")]
         public async Task<IActionResult> GetUserById([Required] int id)
         {
-            var response = await _mediator.Send(new GetUserRequestQuery(id));
+            var response = await _mediator.Send(new GetUserRequestQuery { UserId = id });
             return Ok(response);
         }
 

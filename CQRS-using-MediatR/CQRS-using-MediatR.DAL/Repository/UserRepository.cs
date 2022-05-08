@@ -1,9 +1,9 @@
 ﻿using CQRS_using_MediatR.Repository.Domain;
 using System.Collections.Generic;
 
-namespace CQRS_using_MediatR.Repository
+namespace CQRS_using_MediatR.DAL.Repository
 {
-    public class UserRepository: IUserRepository
+    public class UserRepository : IUserRepository
     {
         public IEnumerable<User> Users { get; } = new List<User>
         {

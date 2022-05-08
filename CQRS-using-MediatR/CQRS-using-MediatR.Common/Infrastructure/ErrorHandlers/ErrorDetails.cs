@@ -6,7 +6,7 @@ namespace CQRS_using_MediatR.Common.Infrastructure.ErrorHandlers
     {
         public ErrorDetails() { }
 
-        public ErrorDetails(ErrorGroupCode errorGroupCode, string message, IEnumerable<string> details = null)
+        public ErrorDetails(ErrorCode errorGroupCode, string message, IEnumerable<string> details = null)
         {
             ErrorCode = (int) errorGroupCode;
             Message = message;
@@ -17,6 +17,6 @@ namespace CQRS_using_MediatR.Common.Infrastructure.ErrorHandlers
 
         public string Message { get; init; }
 
-        public IEnumerable<string> Details { get; init; }
+        public IEnumerable<string>? Details { get; init; }
     }
 }

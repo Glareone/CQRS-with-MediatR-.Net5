@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using CQRS_using_MediatR.Common.Infrastructure.ErrorHandlers;
 
-namespace CQRS_using_MediatR.Infrastructure
+namespace CQRS_using_MediatR.Common.Infrastructure.ResponseTemplate
 {
     using System;
 
