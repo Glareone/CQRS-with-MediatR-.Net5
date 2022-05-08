@@ -5,6 +5,6 @@ namespace CQRS_using_MediatR.DAL.Repository
 {
     public interface IUserRepository
     {
-        public IEnumerable<User> Users { get; }
+        public IList<User> Users { get; }
     }
 }

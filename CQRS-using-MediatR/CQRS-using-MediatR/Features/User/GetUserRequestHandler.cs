@@ -31,7 +31,7 @@ namespace CQRS_using_MediatR.Features.User
             
             return new ResponseTemplate<UserDto>(new UserDto
             {
-                Id = user.Id, Name = user.Name, IsCompleted = user.IsCompleted
+                Id = user.Id, Name = user.Name, IsDeleted = user.IsDeleted
             });
         }
     }
